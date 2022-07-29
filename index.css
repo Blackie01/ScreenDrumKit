@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    padding: o;
+    margin: 0;
+}
+
+.musicTiles{
+    background-image: url(/image/pexels-camy-aquino-5933199.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.keyButton{
+    height: 80px;
+    width: 80px;
+    background-color: gray;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.07s;
+}
+
+.playing{
+    transition:scale(2);
+    border-color: hotpink;
+    box-shadow: 0 0 10px hotpink;
+}
+
+@media (max-width: 768px) {
+
+    .musicTiles{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+        grid-gap: 5px; 
+        text-align: center;
+        
+    }
+    
+
+    .subSection{
+         
+        width: 50%;
+        height: 50%;
+    }
+
+    .keyButton{
+        height: 60px;
+        width: 60px;
+        border: 2px solid green;
+    }
+
+}
