@@ -5,7 +5,7 @@ function removeTransition(e){
 
 document.querySelectorAll('.key').forEach (a =>{
     let audio = a.querySelector('audio');
-    const keys = a.querySelector('button')
+    const keys = a.querySelector('button');
     a.addEventListener('click', event => {
         audio.play();
         audio.currentTime = 0;

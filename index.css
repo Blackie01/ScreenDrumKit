@@ -1,17 +1,27 @@
 *{
     box-sizing: border-box;
-    padding: o;
+    padding: 0;
     margin: 0;
 }
 
-.musicTiles{
+body{
     background-image: url(/image/pexels-camy-aquino-5933199.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
     height: 100vh;
-    align-items: center;
-    justify-content: space-evenly;
+}
+
+.hero{
+    padding: 10% 0;
+    text-align: center;
+}
+
+.musicTiles{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    text-align: center;
+    padding: 0 15%;
+    gap: 10px; 
 }
 
 .keyButton{
@@ -20,7 +30,10 @@
     background-color: gray;
     color: #fff;
     border: none;
-    border-radius: 10px;
+    border-radius: 1rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     transition: all 0.07s;
 }
 
@@ -30,27 +43,21 @@
     box-shadow: 0 0 10px hotpink;
 }
 
+/* media queries */
 @media (max-width: 768px) {
 
     .musicTiles{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
-        grid-gap: 5px; 
-        text-align: center;
-        
-    }
-    
-
-    .subSection{
-         
-        width: 50%;
-        height: 50%;
+        grid-template-columns: repeat(3, 1fr);
+        overflow-x: hidden; 
+        margin: auto;
+        gap: 10px;   
     }
 
     .keyButton{
-        height: 60px;
-        width: 60px;
-        border: 2px solid green;
+        border: none;
+        height: 5rem;
+        width: 5rem;
     }
 
 }
