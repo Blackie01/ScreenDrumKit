@@ -51,6 +51,7 @@ body{
         grid-template-columns: repeat(3, 1fr);
         overflow-x: hidden; 
         margin: auto;
+        padding-top: 30%;
         gap: 10px;   
     }
 
